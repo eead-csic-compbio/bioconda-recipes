@@ -59,8 +59,8 @@ test:
     - run_get_phylomarkers_pipeline.sh
 
 about:
-  home: 
-  summary: "A pipeline to select optimal markers for microbial/plant phylogenomics & species tree estimation using the multispecies coalescent and concatenation"
+  home: https://github.com/vinuesa/get_phylomarkers
+  summary: "A pipeline to select optimal markers and species tree for microbial/plant phylogenomics"
   license: GPL-3.0-or-later
   license_family: GPL3
   license_file: LICENSE.txt

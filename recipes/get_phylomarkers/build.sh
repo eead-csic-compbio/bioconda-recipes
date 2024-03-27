@@ -11,7 +11,7 @@ cp -ar lib \
     pop_gen_tables \
     *.pl \
     *.sh \
-    *-R \
+    *.R \
     CHANGES.txt \
     LICENSE.txt \
     $PREFIX/bin
