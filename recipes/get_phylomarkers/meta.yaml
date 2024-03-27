@@ -52,6 +52,8 @@ test:
     - "*.R"
     - lib
     - bin
+    - test_sequences
+    - pop_gen_tables
 
   commands:
     - run_get_phylomarkers_pipeline.sh
