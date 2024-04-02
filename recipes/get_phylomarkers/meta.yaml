@@ -1,5 +1,5 @@
-{% set version = "2.0.1" %}
-{% set sha256 = "ad7067d8c87bf858c7f1d5c82768654aaec3a2c42d19bb30c04e25ba3c6aa869" %}
+{% set version = "2.1.1" %}
+{% set sha256 = "c17298ad6152eab53ef0254c47d39b500eac4ea431009cfef0d465a7246f0f76" %}
 
 package:
   name: get_phylomarkers
@@ -45,18 +45,21 @@ requirements:
     - bc
 
 test:
+  script_env:
+    - LC_ALL=POSIX        
   source_files:
     - CHANGES.txt
     - "*.pl"
     - "*.sh"
     - "*.R"
+    - test_get_phylomarkers.t
     - lib
     - bin
     - test_sequences
     - pop_gen_tables
 
   commands:
-    - run_get_phylomarkers_pipeline.sh
+    - perl test_get_phylomarkers.t
 
 about:
   home: https://github.com/vinuesa/get_phylomarkers
