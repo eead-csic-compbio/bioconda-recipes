@@ -1,0 +1,51 @@
+package:
+  name: r-kdetrees
+  version: 0.1.5
+
+source:
+  url: https://github.com/grady/kdetrees/archive/refs/tags/v0.1.5.tar.gz
+  sha256: a74c281b85ea7df13593cdfd91b88398980807b5cd44f6f8a7a265942b795d9f
+
+build:
+  number: 0
+  noarch: generic
+  rpaths:
+    - lib/R/lib
+    - lib
+
+requirements:
+  host:
+    - libopenblas
+    - libgfortran5  
+    - r-base
+    - r-desolve
+    - r-hgm   
+    - r-remotes
+    - r-ape
+    - r-distory
+    - r-ggplot2
+    
+  run:
+    - libopenblas
+    - libgfortran5
+    - r-base
+    - r-desolve
+    - r-hgm
+    - r-remotes
+    - r-ape
+    - r-distory
+    - r-ggplot2
+
+test:
+  commands:
+    - $R -e "library(kdetrees)"
+
+about:
+  home: https://github.com/grady/kdetrees 
+  license: GNU General Public License v2 (GPLv2)
+  summary: Nonparametric method for identifying discordant phylogenetic trees
+
+extra:
+  identifiers:
+    - biotools:kdetrees
+    - doi:10.1093/bioinformatics/btu258 
