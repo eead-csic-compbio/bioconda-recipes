@@ -38,6 +38,7 @@ requirements:
 
 test:
   commands:
+    # tested with bioconda-utils build --packages r-kdetrees
     - $R -e "library(kdetrees)"
 
 about:
