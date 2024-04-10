@@ -38,6 +38,7 @@ requirements:
     - phylip
     - parallel
     - phipack
+    - aster
     - iqtree=2.2.0
     - libxml2
     - newick_utils 
