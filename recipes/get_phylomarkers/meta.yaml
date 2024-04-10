@@ -22,25 +22,24 @@ requirements:
     - bash
     - wget
     - perl
-    - r-base
-    - r-ape
+    - r-base 4.3.*
+    - r-kdetrees    
     - r-phangorn
     - r-cluster
     - r-gplots
     - r-vioplot
     - r-plyr
     - r-dplyr  
-    - r-ggplot2
     - r-stringi
     - r-stringr
     - r-seqinr
-    - r-remotes   
     - clustalo
     - fasttree
     - phylip
     - parallel
     - phipack
-    - iqtree
+    - iqtree=2.2.0
+    - libxml2
     - newick_utils 
     - bc
 
