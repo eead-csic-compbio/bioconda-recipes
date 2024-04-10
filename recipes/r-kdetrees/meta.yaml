@@ -17,7 +17,7 @@ requirements:
   host:
     - libopenblas
     - libgfortran5  
-    - r-base=4.3.3
+    - r-base 4.3.*
     - r-desolve
     - r-hgm   
     - r-remotes
