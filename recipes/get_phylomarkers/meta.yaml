@@ -40,6 +40,7 @@ requirements:
     - phipack
     - aster
     - iqtree=2.2.0
+    - libgfortran
     - libxml2
     - newick_utils 
     - bc
