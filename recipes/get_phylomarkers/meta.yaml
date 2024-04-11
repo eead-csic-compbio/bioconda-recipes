@@ -34,7 +34,7 @@ requirements:
     - r-stringr
     - r-seqinr
     - clustalo
-    - fasttree
+    - fasttree=2.1.11
     - phylip
     - parallel
     - phipack
