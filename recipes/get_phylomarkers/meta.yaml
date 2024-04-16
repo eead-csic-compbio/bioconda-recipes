@@ -19,10 +19,6 @@ source:
 
 requirements:
 
-  build:
-    - make
-    - perl
-
   run:
     - bash
     - bc
@@ -43,6 +39,9 @@ requirements:
     - parallel
     - libxml2
     - newick_utils 
+    # linked      
+    - libgfortran
+
 
 test:
   script_env:
