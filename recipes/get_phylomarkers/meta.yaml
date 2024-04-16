@@ -9,7 +9,7 @@ build:
   number: 2
   skip: True  # [osx]
   script_env:
-   - LC_ALL=POSIX
+    - LC_ALL=POSIX
   run_exports:
     - {{ pin_subpackage('get_phylomarkers', max_pin="x") }}
 
