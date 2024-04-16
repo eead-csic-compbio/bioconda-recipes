@@ -1,31 +1,36 @@
-{% set version = "2.1.1" %}
-{% set sha256 = "c17298ad6152eab53ef0254c47d39b500eac4ea431009cfef0d465a7246f0f76" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "e8169d8b63d00b0cb4d7211f00b29e97b481ffbf6c637967e926d170e8dce856" %}
 
 package:
   name: get_phylomarkers
   version: {{ version }}
 
 build:
-  number: 0
-  noarch: generic
+  number: 2
+  skip: True  # [osx]
   script_env:
    - LC_ALL=POSIX
   run_exports:
     - {{ pin_subpackage('get_phylomarkers', max_pin="x") }}
 
 source:
-  url: https://github.com/vinuesa/get_phylomarkers/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/vinuesa/get_phylomarkers/archive/refs/tags/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 requirements:
+
+  build:
+    - make
+    - perl
+
   run:
     - bash
-    - wget
+    - bc
     - perl
     - r-base 4.3.*
     - r-kdetrees    
-    - r-phangorn
-    - r-cluster
+    - r-ape
+    - r-ggplot2  
     - r-gplots
     - r-vioplot
     - r-plyr
@@ -34,16 +39,10 @@ requirements:
     - r-stringr
     - r-seqinr
     - clustalo
-    - fasttree=2.1.11
-    - phylip
+    - snp-sites
     - parallel
-    - phipack
-    - aster
-    - iqtree=2.2.0
-    - libgfortran
     - libxml2
     - newick_utils 
-    - bc
 
 test:
   script_env:

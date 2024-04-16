@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# copy scripts and its dependencies to $PREFIX/bin folder,
-# note that db/ does not contain swissprot nor Pfam data
-# to keep the package small
-
 mkdir -p $PREFIX/bin
+
+# copy scripts, lib, precompiled binaries data and other files to $PREFIX/bin folder
 cp -ar lib \
     bin \
     test_sequences \
