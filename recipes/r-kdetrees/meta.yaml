@@ -28,7 +28,7 @@ requirements:
   run:
     - libopenblas
     - libgfortran5
-    - r-base
+    - r-base 4.3.*
     - r-desolve
     - r-hgm
     - r-remotes
@@ -43,7 +43,7 @@ test:
 
 about:
   home: https://github.com/grady/kdetrees 
-  license: GNU General Public License v2 (GPLv2)
+  license: GPL-2.0
   summary: Nonparametric method for identifying discordant phylogenetic trees
 
 extra:
