@@ -1,5 +1,5 @@
-{% set version = "2.2.0" %}
-{% set sha256 = "e8169d8b63d00b0cb4d7211f00b29e97b481ffbf6c637967e926d170e8dce856" %}
+{% set version = "2.2.1" %}
+{% set sha256 = "a6eb9e6f2646386e79258549d30b018360814e06b1c16e5a8410e76788794ea5" %}
 
 package:
   name: get_phylomarkers
@@ -14,7 +14,7 @@ build:
     - {{ pin_subpackage('get_phylomarkers', max_pin="x") }}
 
 source:
-  url: https://github.com/vinuesa/get_phylomarkers/archive/refs/tags/{{ version }}.tar.gz
+  url: https://github.com/vinuesa/get_phylomarkers/archive/refs/tags/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
     - bash
     - bc
     - perl
-    - r-base 4.3.*
+    - r-base
     - r-kdetrees    
     - r-ape
     - r-ggplot2  
@@ -56,7 +56,7 @@ test:
     - pop_gen_tables
 
   commands:
-    - perl test_get_phylomarkers.t
+    - pwd & ls && cd ${PREFIX}/bin/ && pwd & ls && perl test_get_phylomarkers.t
 
 about:
   home: https://github.com/vinuesa/get_phylomarkers

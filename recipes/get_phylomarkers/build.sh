@@ -10,6 +10,7 @@ cp -ar lib \
     *.pl \
     *.sh \
     *.R \
+    *.t \
     CHANGES.txt \
     LICENSE.txt \
     $PREFIX/bin
